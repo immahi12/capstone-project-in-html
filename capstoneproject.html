@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery App</title>
+
+<style>
+
+/* ====== GLOBAL STYLES ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* ====== NAVBAR ====== */
+nav {
+    background: #ff4d4d;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+    background: url('https://i.imgur.com/ZKg2Qz2.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 20px 40px;
+    color: white;
+    border-radius: 8px;
+}
+
+/* ====== CATEGORY SECTION ====== */
+.categories {
+    padding: 30px;
+}
+
+.categories h2 {
+    margin-bottom: 15px;
+}
+
+.category-list {
+    display: flex;
+    gap: 20px;
+}
+
+.category-box {
+    width: 150px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #ccc;
+    font-weight: bold;
+}
+
+/* ====== RESTAURANT SECTION ====== */
+.restaurants {
+    padding: 30px;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px #ccc;
+    text-align: center;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.restaurant-card h3 {
+    margin: 10px 0;
+}
+
+/* ====== MENU SECTION ====== */
+.menu {
+    padding: 30px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #ccc;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ====== CART SECTION ====== */
+.cart {
+    padding: 30px;
+}
+
+.cart-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav>
+    <h2>FoodDelivery</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cart">Cart</a></li>
+    </ul>
+</nav>
+
+<!-- ====== HERO ====== -->
+<div class="hero">
+    <h1>Delicious Food Delivered Fast</h1>
+</div>
+
+<!-- ====== CATEGORIES ====== -->
+<section class="categories">
+    <h2>Categories</h2>
+    <div class="category-list">
+        <div class="category-box">Pizza</div>
+        <div class="category-box">Burgers</div>
+        <div class="category-box">Biryani</div>
+        <div class="category-box">Snacks</div>
+    </div>
+</section>
+
+<!-- ====== RESTAURANTS ====== -->
+<section class="restaurants" id="restaurants">
+    <h2>Popular Restaurants</h2>
+
+    <div class="restaurant-grid">
+        <div class="restaurant-card">
+            <img src="pizza.jpeg" alt="">
+            <h3>Tasty Pizza</h3>
+            <p>Italian • 4.5 ⭐</p>
+        </div>
+
+        <div class="restaurant-card">
+            <img src="burger.jpeg" alt="">
+            <h3>Burger Hub</h3>
+            <p>Fast Food • 4.2 ⭐</p>
+        </div>
+
+        <div class="restaurant-card">
+            <img src="biryani.jpeg" alt="">
+            <h3>Royal Biryani</h3>
+            <p>Indian • 4.8 ⭐</p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== MENU LIST ====== -->
+<section class="menu" id="menu">
+    <h2>Menu</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="margheritapizza.jpeg" alt="">
+            <h3>Margherita Pizza</h3>
+            <p>₹200</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="burger.jpeg" alt="">
+            <h3>Veg Burger</h3>
+            <p>₹120</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="biryani.jpeg" alt="">
+            <h3>Chicken Biryani</h3>
+            <p>₹180</p>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ====== CART ====== -->
+<section class="cart" id="cart">
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+        <span>Margherita Pizza (1)</span>
+        <strong>₹200</strong>
+    </div>
+
+    <div class="cart-item">
+        <span>Veg Burger (2)</span>
+        <strong>₹240</strong>
+    </div>
+
+    <h3>Total: ₹440</h3>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+    © 2025 Food Delivery App • HTML & CSS Only
+</footer>
+
+</body>
+</html>
